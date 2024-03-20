@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F2A0322C-3C93-4585-A03C-D1632088C520}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="area_rtv\p_ar_ctrls_rtv.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ccom\rtv\p_cc_rtvcm.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="sysc\p_sy_shmop_grp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ccom\webserver\p_cc_webserver.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="p_ar_ctrls_rtv">
+        <MSBuild Projects="area_rtv\p_ar_ctrls_rtv.dproj"/>
+    </Target>
+    <Target Name="p_ar_ctrls_rtv:Clean">
+        <MSBuild Projects="area_rtv\p_ar_ctrls_rtv.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="p_ar_ctrls_rtv:Make">
+        <MSBuild Projects="area_rtv\p_ar_ctrls_rtv.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="p_cc_rtvcm">
+        <MSBuild Projects="ccom\rtv\p_cc_rtvcm.dproj"/>
+    </Target>
+    <Target Name="p_cc_rtvcm:Clean">
+        <MSBuild Projects="ccom\rtv\p_cc_rtvcm.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="p_cc_rtvcm:Make">
+        <MSBuild Projects="ccom\rtv\p_cc_rtvcm.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="p_sy_shmop_grp">
+        <MSBuild Projects="sysc\p_sy_shmop_grp.dproj"/>
+    </Target>
+    <Target Name="p_sy_shmop_grp:Clean">
+        <MSBuild Projects="sysc\p_sy_shmop_grp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="p_sy_shmop_grp:Make">
+        <MSBuild Projects="sysc\p_sy_shmop_grp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="p_cc_webserver">
+        <MSBuild Projects="ccom\webserver\p_cc_webserver.dproj"/>
+    </Target>
+    <Target Name="p_cc_webserver:Clean">
+        <MSBuild Projects="ccom\webserver\p_cc_webserver.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="p_cc_webserver:Make">
+        <MSBuild Projects="ccom\webserver\p_cc_webserver.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="p_ar_ctrls_rtv;p_cc_rtvcm;p_sy_shmop_grp;p_cc_webserver"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="p_ar_ctrls_rtv:Clean;p_cc_rtvcm:Clean;p_sy_shmop_grp:Clean;p_cc_webserver:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="p_ar_ctrls_rtv:Make;p_cc_rtvcm:Make;p_sy_shmop_grp:Make;p_cc_webserver:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

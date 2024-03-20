@@ -1,0 +1,23 @@
+//----------------------[ WINDOW MESSAGE DEFINE ]---------------------------
+U_WMG_SYS  = WM_USER + 0;
+U_WMG_STC  = WM_USER + 1;
+U_WMG_PLC  = WM_USER + 2;
+U_WMG_MUX  = WM_USER + 3;
+U_WMG_RTV  = WM_USER + 4;
+U_WMG_SRV  = WM_USER + 5;
+U_WMG_RFD  = WM_USER + 6;
+U_WMG_CTL  = WM_USER + 7;
+U_WMG_MAIN = WM_USER + 8;
+U_WMG_BCR  = WM_USER + 9;
+U_WMG_RGV  = WM_USER + 10;
+U_WMG_EMS  = WM_USER + 11;
+U_WMG_MES  = WM_USER + 12;
+U_WMG_LOD  = WM_USER + 13;
+U_WMG_AGV  = WM_USER + 14;
+U_WMG_MLD  = WM_USER + 15;
+U_WMG_RCT  = WM_USER + 16;
+U_WMG_API  = WM_USER + 17;
+U_WMG_DSP  = WM_USER + 18;
+U_WMG_WSV  = WM_USER + 19;
+
+
